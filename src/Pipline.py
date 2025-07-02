@@ -5,10 +5,8 @@
  Usage: python pipeline.py  --input data/raw/your_doc.pdf """ 
 
 import argparse, json, pathlib 
-from ocr_extractor 
-import extract_text 
-from llm_extractor 
-import extract_entities 
+from ocr_extractor import extract_text 
+from llm import extract_entities 
 def run_pipeline(input_path: str): 
     text = extract_text(input_path) 
     entities = extract_entities(text) 
